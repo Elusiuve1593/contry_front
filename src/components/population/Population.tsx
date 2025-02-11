@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { color } from "../../common/styles/styles";
 import { usePopulationData } from "../../hooks/usePopulationData";
-import { PopulationTable } from "./table/Population";
+import { PopulationTable } from "./table/PopulationTable";
 
 export const PopulationChart = ({ country }: { country: string }) => {
   const { populationData } = usePopulationData(country);
