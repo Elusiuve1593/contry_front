@@ -1,11 +1,12 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { color } from "../common/styles/styles";
 
 export const NotFoundPage = () => {
   return (
     <Box
       sx={{
-        color: "#000",
+        color: color.black,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -17,7 +18,7 @@ export const NotFoundPage = () => {
       <Typography variant="h2" sx={{ mb: 2 }}>
         <Typography
           variant="h2"
-          sx={{ color: "#d61d1d", display: "inline-block" }}
+          sx={{ color: color.red, display: "inline-block" }}
         >
           404
         </Typography>{" "}

@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { CountryInterface } from "../../interfaces/countries.interface";
 import { Countires } from "./countries/Countries";
+import { color, font } from "../../common/styles/styles";
 
 interface HomePageProps {
   countries: CountryInterface[];
@@ -18,26 +19,36 @@ interface HomePageProps {
 
 export const HomePage = ({ countries }: HomePageProps) => {
   return (
-    <Box sx={{ backgroundColor: "#121212", minHeight: "100vh", padding: 2 }}>
-      <Typography variant="h4" sx={{ color: "white", marginBottom: 2 }}>
+    <Box
+      sx={{
+        backgroundColor: color.almostBlack,
+        minHeight: "100vh",
+        padding: 2,
+      }}
+    >
+      <Typography variant="h4" sx={{ color: color.white, marginBottom: 2 }}>
         Country List
       </Typography>
       {countries.length > 0 ? (
         <TableContainer
           component={Paper}
           sx={{
-            backgroundColor: "#1e1e1e",
+            backgroundColor: color.darkGray,
             borderRadius: "8px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            boxShadow: `0 4px 8px ${color.semiTransparentBlack}`,
           }}
         >
           <Table sx={{ minWidth: 500 }}>
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "#f5f5f5", fontWeight: "bold" }}>
+                <TableCell
+                  sx={{ color: color.lightGray, fontWeight: font.bold }}
+                >
                   Country Code
                 </TableCell>
-                <TableCell sx={{ color: "#f5f5f5", fontWeight: "bold" }}>
+                <TableCell
+                  sx={{ color: color.lightGray, fontWeight: font.bold }}
+                >
                   Country Name
                 </TableCell>
               </TableRow>
@@ -48,7 +59,7 @@ export const HomePage = ({ countries }: HomePageProps) => {
           </Table>
         </TableContainer>
       ) : (
-        <Typography sx={{ color: "white", marginTop: 2 }}>
+        <Typography sx={{ color: color.white, marginTop: 2 }}>
           No countries available
         </Typography>
       )}

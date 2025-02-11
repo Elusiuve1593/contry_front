@@ -25,6 +25,17 @@ export const Img = styled("img")({
   height: "auto",
 });
 
-export const textColor = {
-  color: "#000",
+export const color = {
+  white: "#fff",
+  almostBlack: "#121212",
+  darkGray: "#1e1e1e",
+  semiTransparentBlack: "#00000019",
+  lightGray: "#f5f5f5",
+  cyan: "#00bcd4",
+  black: "#000",
+  red: "#d61d1d",
+};
+
+export const font = {
+  bold: "bold",
 };
