@@ -6,12 +6,10 @@ import { CountryFlag } from "../interfaces/country-flag.interface";
 export const useCountryDetails = (countryCode: string | undefined) => {
   const [borders, setBorders] = useState<CountryBorders | null>(null);
   const [flag, setFlag] = useState<CountryFlag | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchCountryDetails = async () => {
       if (!countryCode) return;
-      setError(null);
       setBorders(null);
       setFlag(null);
 
@@ -31,7 +29,6 @@ export const useCountryDetails = (countryCode: string | undefined) => {
           throw new Error("Error fetching country flag");
         }
       } catch (err: any) {
-        setError("Error fetching country details");
         console.error("Fetching error", err);
       } 
     };
@@ -39,5 +36,5 @@ export const useCountryDetails = (countryCode: string | undefined) => {
     fetchCountryDetails();
   }, [countryCode]);
 
-  return { borders, flag, error };
+  return { borders, flag };
 };

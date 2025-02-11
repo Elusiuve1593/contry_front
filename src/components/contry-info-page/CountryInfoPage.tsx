@@ -15,7 +15,7 @@ import { useCountryDetails } from "../../hooks/useCountryDetails";
 
 export const CountryInfoPage = () => {
   const { countryCode } = useParams();
-  const { borders, flag, error } = useCountryDetails(countryCode);
+  const { borders, flag } = useCountryDetails(countryCode);
 
   if (!countryCode) {
     return (
@@ -25,7 +25,7 @@ export const CountryInfoPage = () => {
     );
   }
 
-  if (error || !borders) {
+  if (!borders) {
     return (
       <Typography sx={{ color: color.white }}>
         Country not found or error fetching data
