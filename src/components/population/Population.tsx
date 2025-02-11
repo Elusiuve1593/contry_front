@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { color } from "../../common/styles/styles";
+import { color } from "../../common/styles";
 import { usePopulationData } from "../../hooks/usePopulationData";
 import { PopulationTable } from "./table/PopulationTable";
 

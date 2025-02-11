@@ -10,8 +10,9 @@ import { useParams } from "react-router-dom";
 import { PopulationChart } from "../population/Population";
 import { Country } from "./contry/Country";
 import { BorderedCountries } from "./bordered-countries/BorderedCountries";
-import { color } from "../../common/styles/styles";
+import { color } from "../../common/styles";
 import { useCountryDetails } from "../../hooks/useCountryDetails";
+import { GoHome } from "../GoHome";
 
 export const CountryInfoPage = () => {
   const { countryCode } = useParams();
@@ -35,6 +36,7 @@ export const CountryInfoPage = () => {
 
   return (
     <Box sx={{ backgroundColor: color.almostBlack, padding: 2 }}>
+      <GoHome />
       <Country commonName={borders.commonName} flag={flag?.data.flag} />
 
       <Typography sx={{ color: color.white, marginBottom: 2 }}>

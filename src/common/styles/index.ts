@@ -34,6 +34,7 @@ export const color = {
   cyan: "#00bcd4",
   black: "#000",
   red: "#d61d1d",
+  darkCyan: "#0097a7"
 };
 
 export const font = {

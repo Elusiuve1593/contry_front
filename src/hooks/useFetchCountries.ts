@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { CountryInterface } from "../interfaces/countries.interface";
 import toast from "react-hot-toast";
-import { style } from "../common/styles/styles";
+import { style } from "../common/styles";
 
 export const useFetchCountries = () => {
   const [countries, setCountries] = useState<CountryInterface[]>([]);

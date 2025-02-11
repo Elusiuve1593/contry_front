@@ -9,9 +9,9 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+import { color, font } from "../../common/styles";
 import { CountryInterface } from "../../interfaces/countries.interface";
 import { Countires } from "./countries/Countries";
-import { color, font } from "../../common/styles/styles";
 
 interface HomePageProps {
   countries: CountryInterface[];

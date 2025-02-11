@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import pulse from "./common/preloader/Pulse.gif";
-import { Img, PreloaderContainer } from "./common/styles/styles";
+import { Img, PreloaderContainer } from "./common/styles";
 import { CountryInfoPage } from "./components/contry-info-page/CountryInfoPage";
 import { HomePage } from "./components/home-page/HomePage";
 import { NotFoundPage } from "./components/NotFoundPage";
